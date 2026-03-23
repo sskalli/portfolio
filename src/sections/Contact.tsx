@@ -73,7 +73,7 @@ export default function Contact() {
 	];
 
 	return (
-		<section id="contact" className="py-20 bg-gray-50 dark:bg-dark-800">
+		<section id="contact" className="py-20 bg-gray-100 dark:bg-dark-800">
 			<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 				<motion.div
 					initial={{ opacity: 0 }}

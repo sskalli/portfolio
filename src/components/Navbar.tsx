@@ -7,7 +7,7 @@ interface NavbarProps {
 }
 
 export default function Navbar({ isDark, onToggleDarkMode }: NavbarProps) {
-	const [isOpen, setIsOpen] = useState(false)
+	const [isOpen, setIsOpen] = useState(false);
 
 	const navItems = [
 		{ label: 'About', href: '#about' },
@@ -21,7 +21,6 @@ export default function Navbar({ isDark, onToggleDarkMode }: NavbarProps) {
 		<nav className="fixed top-0 w-full bg-white/80 dark:bg-dark-900/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-dark-700">
 			<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="relative flex items-center h-16">
-
 					{/* Desktop Navigation */}
 					<div className="hidden md:flex items-center space-x-8 absolute left-1/2 -translate-x-1/2">
 						{navItems.map((item, index) => (
@@ -42,7 +41,7 @@ export default function Navbar({ isDark, onToggleDarkMode }: NavbarProps) {
 					<div className="flex items-center space-x-4 ml-auto">
 						<button
 							onClick={onToggleDarkMode}
-							className="p-2 rounded-lg bg-gray-100 dark:bg-dark-800 hover:bg-gray-200 dark:hover:bg-dark-700 transition-colors"
+							className="p-2 rounded-lg bg-gray-100 dark:bg-dark-800 text-gray-700 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-dark-700 transition-colors"
 							aria-label="Toggle dark mode"
 						>
 							{isDark ? (
@@ -56,9 +55,7 @@ export default function Navbar({ isDark, onToggleDarkMode }: NavbarProps) {
 								</svg>
 							) : (
 								<svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-									<path
-										d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.267-2.597.75-3.752A9.753 9.753 0 1021.752 15z"
-									/>
+									<path d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.267-2.597.75-3.752A9.753 9.753 0 1021.752 15z" />
 								</svg>
 							)}
 						</button>

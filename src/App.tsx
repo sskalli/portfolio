@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './sections/Hero';
 import Skills from './sections/Skills';
@@ -7,15 +7,27 @@ import Contact from './sections/Contact';
 import Footer from './components/Footer';
 
 function App() {
-	const [isDark, setIsDark] = useState(true);
+	const [isDark, setIsDark] = useState(() => {
+		if (typeof window === 'undefined') {
+			return true;
+		}
+
+		const savedTheme = window.localStorage.getItem('theme');
+
+		if (savedTheme) {
+			return savedTheme === 'dark';
+		}
+
+		return window.matchMedia('(prefers-color-scheme: dark)').matches;
+	});
+
+	useEffect(() => {
+		document.documentElement.classList.toggle('dark', isDark);
+		window.localStorage.setItem('theme', isDark ? 'dark' : 'light');
+	}, [isDark]);
 
 	const toggleDarkMode = () => {
-		setIsDark(!isDark);
-		if (!isDark) {
-			document.documentElement.classList.add('dark');
-		} else {
-			document.documentElement.classList.remove('dark');
-		}
+		setIsDark((prevIsDark) => !prevIsDark);
 	};
 
 	return (
