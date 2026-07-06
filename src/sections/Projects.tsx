@@ -128,12 +128,13 @@ export default function Projects() {
                                         const iconColorClass = techIconColors[tech] ?? 'text-stone-300';
 
                                         return (
-                                            <div
-                                                key={tech}
-                                                title={tech}
-                                                aria-label={tech}
-                                                className="flex h-9 w-9 items-center justify-center rounded-md border border-zinc-600 bg-zinc-700"
-                                            >
+										<div
+											key={tech}
+											title={tech}
+											role="img"
+											aria-label={tech}
+											className="flex h-9 w-9 items-center justify-center rounded-md border border-zinc-600 bg-zinc-700"
+										>
                                                 {TechIcon ? (
                                                     <TechIcon className={`w-5 h-5 ${iconColorClass}`} />
                                                 ) : (
