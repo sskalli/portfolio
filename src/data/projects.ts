@@ -3,45 +3,34 @@ export interface Project {
 	name: string;
 	description: string;
 	techStack: string[];
-	githubUrl: string;
-	liveUrl: string;
+	githubUrl?: string;
+	liveUrl?: string;
 }
 
 export const projects: Project[] = [
 	{
 		id: 1,
-		name: 'E-Commerce Platform',
+		name: 'greenie-central',
 		description:
-			'A full-stack e-commerce platform built with React and Node.js. Features include product catalog, shopping cart, payment integration, and admin dashboard. Implemented caching strategies that reduced API response times by 40%.',
-		techStack: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Stripe', 'Redux'],
-		githubUrl: 'https://github.com',
-		liveUrl: 'https://example.com',
+			'Little to-do list application built with Next.js and TypeScript. Features include task creation, editing, deletion, and categorization.',
+		techStack: [
+			'Next.js',
+			'React',
+			'TypeScript',
+			'Prisma',
+			'PostgreSQL',
+			'Zod',
+			'TanStack Query',
+			'Tailwind CSS',
+		],
+		githubUrl: 'https://github.com/sskalli/greenie-central',
+		liveUrl: 'https://greenie-central.vercel.app/',
 	},
 	{
 		id: 2,
-		name: 'Task Management App',
+		name: 'French wordle fork',
 		description:
-			'A collaborative task management application with real-time updates using WebSockets. Built with Next.js and MongoDB. Supports multiple workspaces, team collaboration, and automated workflows.',
-		techStack: ['Next.js', 'TypeScript', 'MongoDB', 'Socket.io', 'Tailwind CSS'],
-		githubUrl: 'https://github.com',
-		liveUrl: 'https://example.com',
-	},
-	{
-		id: 3,
-		name: 'Analytics Dashboard',
-		description:
-			'Real-time analytics dashboard displaying metrics across multiple data sources. Implemented complex data visualization with interactive charts and customizable widgets for enterprise clients.',
-		techStack: ['React', 'D3.js', 'Express', 'Redis', 'AWS S3'],
-		githubUrl: 'https://github.com',
-		liveUrl: 'https://example.com',
-	},
-	{
-		id: 4,
-		name: 'Mobile Chat Application',
-		description:
-			'Cross-platform messaging app built with React Native. Features include end-to-end encryption, message search, and voice/video call integration.',
-		techStack: ['React Native', 'TypeScript', 'Firebase', 'Redux', 'Expo'],
-		githubUrl: 'https://github.com',
-		liveUrl: 'https://example.com',
+			'A fork of the French version of the popular wordle game. Work in progress to implement additional features for regulars like myself.',
+		techStack: ['Vue', 'TypeScript'],
 	},
 ];
