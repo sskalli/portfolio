@@ -73,7 +73,7 @@ export default function Contact() {
 	];
 
 	return (
-		<section id="contact" className="py-20 bg-gray-100 dark:bg-dark-800">
+		<section id="contact" className="bg-[#f4f8ff] py-20">
 			<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 				<motion.div
 					initial={{ opacity: 0 }}
@@ -81,8 +81,8 @@ export default function Contact() {
 					transition={{ duration: 0.8 }}
 					viewport={{ once: true }}
 				>
-					<h2 className="text-4xl md:text-5xl font-bold mb-4">Get In Touch</h2>
-					<p className="text-gray-600 dark:text-gray-400 text-lg mb-12">
+					<h2 className="mb-4 text-4xl font-bold text-slate-900 md:text-5xl">Get In Touch</h2>
+					<p className="mb-12 text-lg text-slate-600">
 						Have a question or want to work together? Feel free to reach out!
 					</p>
 
@@ -96,7 +96,7 @@ export default function Contact() {
 							className="space-y-8"
 						>
 							<div>
-								<h3 className="text-xl font-semibold mb-6 text-gray-900 dark:text-white">
+								<h3 className="mb-6 text-xl font-semibold text-slate-900">
 									Contact Methods
 								</h3>
 								<div className="space-y-4">
@@ -106,16 +106,16 @@ export default function Contact() {
 											href={method.href}
 											target="_blank"
 											rel="noopener noreferrer"
-											className="flex items-start space-x-4 p-4 bg-white dark:bg-dark-900 rounded-lg hover:shadow-md dark:hover:shadow-lg transition-shadow"
+											className="flex items-start space-x-4 rounded-lg border border-sky-100 bg-white p-4 transition-shadow hover:shadow-[0_12px_28px_rgba(148,163,184,0.1)]"
 										>
-											<div className="text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1">
+											<div className="mt-1 flex-shrink-0 text-sky-700">
 												{method.icon}
 											</div>
 											<div>
-												<p className="font-semibold text-gray-900 dark:text-white">
+												<p className="font-semibold text-slate-900">
 													{method.label}
 												</p>
-												<p className="text-gray-600 dark:text-gray-400 text-sm">{method.value}</p>
+												<p className="text-sm text-slate-600">{method.value}</p>
 											</div>
 										</a>
 									))}
@@ -134,7 +134,7 @@ export default function Contact() {
 								<div>
 									<label
 										htmlFor="name"
-										className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+										className="mb-2 block text-sm font-medium text-slate-700"
 									>
 										Name
 									</label>
@@ -145,7 +145,7 @@ export default function Contact() {
 										value={formData.name}
 										onChange={handleChange}
 										required
-										className="w-full px-4 py-2 rounded-lg bg-white dark:bg-dark-900 border border-gray-300 dark:border-dark-700 text-gray-900 dark:text-white focus:outline-none focus:border-blue-600 dark:focus:border-blue-400 transition-colors"
+										className="w-full rounded-lg border border-sky-200 bg-white px-4 py-2 text-slate-800 transition-colors placeholder:text-slate-400 focus:border-sky-400 focus:outline-none"
 										placeholder="Your name"
 									/>
 								</div>
@@ -153,7 +153,7 @@ export default function Contact() {
 								<div>
 									<label
 										htmlFor="email"
-										className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+										className="mb-2 block text-sm font-medium text-slate-700"
 									>
 										Email
 									</label>
@@ -164,7 +164,7 @@ export default function Contact() {
 										value={formData.email}
 										onChange={handleChange}
 										required
-										className="w-full px-4 py-2 rounded-lg bg-white dark:bg-dark-900 border border-gray-300 dark:border-dark-700 text-gray-900 dark:text-white focus:outline-none focus:border-blue-600 dark:focus:border-blue-400 transition-colors"
+										className="w-full rounded-lg border border-sky-200 bg-white px-4 py-2 text-slate-800 transition-colors placeholder:text-slate-400 focus:border-sky-400 focus:outline-none"
 										placeholder="your@email.com"
 									/>
 								</div>
@@ -172,7 +172,7 @@ export default function Contact() {
 								<div>
 									<label
 										htmlFor="message"
-										className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+										className="mb-2 block text-sm font-medium text-slate-700"
 									>
 										Message
 									</label>
@@ -183,7 +183,7 @@ export default function Contact() {
 										onChange={handleChange}
 										required
 										rows={5}
-										className="w-full px-4 py-2 rounded-lg bg-white dark:bg-dark-900 border border-gray-300 dark:border-dark-700 text-gray-900 dark:text-white focus:outline-none focus:border-blue-600 dark:focus:border-blue-400 transition-colors resize-none"
+										className="w-full resize-none rounded-lg border border-sky-200 bg-white px-4 py-2 text-slate-800 transition-colors placeholder:text-slate-400 focus:border-sky-400 focus:outline-none"
 										placeholder="Your message..."
 									></textarea>
 								</div>
@@ -192,7 +192,7 @@ export default function Contact() {
 									<motion.div
 										initial={{ opacity: 0, y: -10 }}
 										animate={{ opacity: 1, y: 0 }}
-										className="p-4 bg-green-50 dark:bg-green-900 text-green-700 dark:text-green-200 rounded-lg"
+										className="rounded-lg border border-sky-200 bg-sky-50 p-4 text-sky-700"
 									>
 										✓ Thank you! Your message has been sent.
 									</motion.div>
@@ -200,7 +200,7 @@ export default function Contact() {
 
 								<button
 									type="submit"
-									className="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
+									className="w-full rounded-lg bg-gradient-to-r from-sky-500 to-blue-600 px-6 py-3 font-semibold text-white transition-all hover:from-sky-400 hover:to-blue-500"
 								>
 									Send Message
 								</button>

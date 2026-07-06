@@ -7,5 +7,10 @@ html {
 }
 
 body {
-	@apply bg-white dark:bg-dark-900 text-gray-900 dark:text-gray-100 transition-colors duration-300;
+	@apply bg-[#edf4ff] text-slate-800 antialiased;
+	background-image: radial-gradient(circle at top, rgba(125, 154, 214, 0.18), transparent 42%);
+}
+
+::selection {
+	@apply bg-blue-200 text-slate-900;
 }
