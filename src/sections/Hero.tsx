@@ -22,7 +22,7 @@ export default function Hero() {
 	};
 
 	return (
-		<section className="min-h-screen flex items-center justify-center bg-white dark:bg-dark-900 pt-16">
+		<section id="about" className="flex min-h-screen items-center justify-center bg-neutral-900 pt-16">
 			<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 				<motion.div
 					variants={containerVariants}
@@ -31,16 +31,14 @@ export default function Hero() {
 					className="text-center"
 				>
 					{/* Name */}
-					<motion.h1 variants={itemVariants} className="text-5xl md:text-7xl font-bold mb-6">
-						<span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-							Sami Skalli
-						</span>
+					<motion.h1 variants={itemVariants} className="mb-6 text-5xl font-bold text-stone-100 md:text-7xl">
+						Sami Skalli
 					</motion.h1>
 
 					{/* Title */}
 					<motion.p
 						variants={itemVariants}
-						className="text-2xl md:text-3xl text-gray-600 dark:text-gray-300 mb-6"
+						className="mb-6 text-2xl text-stone-300 md:text-3xl"
 					>
 						Senior JavaScript / TypeScript Developer
 					</motion.p>
@@ -48,11 +46,11 @@ export default function Hero() {
 					{/* Summary */}
 					<motion.p
 						variants={itemVariants}
-						className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed"
+						className="mx-auto mb-12 max-w-2xl text-lg leading-relaxed text-stone-300"
 					>
-						I craft beautiful, scalable web experiences with React, TypeScript, and Node.js. With 5
-						years of professional experience, I help teams build high-performance applications that
-						users love.
+						Full-stack developer with 5 years of experience across the JavaScript and TypeScript ecosystem.
+						I enjoy designing and building solutions end-to-end — from architecture to shipping — with a
+						focus on clean, maintainable code that holds up as products evolve.
 					</motion.p>
 
 					{/* CTA Buttons */}
@@ -62,13 +60,13 @@ export default function Hero() {
 					>
 						<a
 							href="#projects"
-							className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold transition-colors"
+							className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-3 font-semibold text-stone-100 transition-colors hover:bg-blue-500"
 						>
 							View Projects
 						</a>
 						<a
 							href="#contact"
-							className="inline-flex items-center justify-center px-8 py-3 rounded-lg border-2 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-dark-800 font-semibold transition-colors"
+							className="inline-flex items-center justify-center rounded-lg border-2 border-zinc-600 px-8 py-3 font-semibold text-stone-100 transition-colors hover:border-blue-400 hover:bg-zinc-900 hover:text-blue-300"
 						>
 							Contact Me
 						</a>
@@ -81,7 +79,7 @@ export default function Hero() {
 						className="flex justify-center mt-16"
 					>
 						<svg
-							className="w-6 h-6 text-gray-400 dark:text-gray-600"
+							className="h-6 w-6 text-slate-500"
 							fill="none"
 							stroke="currentColor"
 							viewBox="0 0 24 24"

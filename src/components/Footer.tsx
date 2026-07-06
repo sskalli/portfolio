@@ -38,7 +38,7 @@ export default function Footer() {
 	];
 
 	return (
-		<footer className="bg-gray-50 dark:bg-dark-800 border-t border-gray-200 dark:border-dark-700">
+		<footer className="border-t border-zinc-700 bg-neutral-900">
 			<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 				<div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
 					{/* Copyright */}
@@ -46,7 +46,7 @@ export default function Footer() {
 						initial={{ opacity: 0 }}
 						whileInView={{ opacity: 1 }}
 						transition={{ duration: 0.5 }}
-						className="text-gray-600 dark:text-gray-400"
+						className="text-stone-300"
 					>
 						© {currentYear} Developer Portfolio. All rights reserved.
 					</motion.p>
@@ -64,7 +64,7 @@ export default function Footer() {
 								href={link.url}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+								className="text-stone-300 transition-colors hover:text-blue-300"
 								aria-label={link.label}
 							>
 								{link.icon}

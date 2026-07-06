@@ -9,15 +9,15 @@ export default function Skills() {
 	const skillCategories: SkillCategory[] = [
 		{
 			title: 'Frontend',
-			skills: ['React', 'Vue', 'Angular', 'TypeScript', 'Next.js', 'Bootstrap', 'Redux'],
+			skills: ['React', 'Vue', 'Angular', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Bootstrap', 'Redux', 'TanStack Query'],
 		},
 		{
 			title: 'Backend',
-			skills: ['Node.js', 'REST APIs', 'PostgreSQL', 'Redis'],
+			skills: ['Node.js', 'REST APIs', 'PostgreSQL', 'Redis', 'Prisma', 'Zod'],
 		},
 		{
 			title: 'Tools & Platforms',
-			skills: ['Git', 'Docker', 'CI/CD', 'AWS'],
+			skills: ['Git', 'Docker', 'CI/CD', 'AWS', 'Electron'],
 		},
 		{
 			title: 'Other Skills',
@@ -45,7 +45,7 @@ export default function Skills() {
 	};
 
 	return (
-		<section id="skills" className="py-20 bg-white dark:bg-dark-900">
+		<section id="skills" className="bg-neutral-950 py-20">
 			<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 				<motion.div
 					initial={{ opacity: 0 }}
@@ -53,7 +53,7 @@ export default function Skills() {
 					transition={{ duration: 0.8 }}
 					viewport={{ once: true }}
 				>
-					<h2 className="text-4xl md:text-5xl font-bold mb-12">Skills</h2>
+					<h2 className="mb-12 text-4xl font-bold text-stone-100 md:text-5xl">Skills</h2>
 
 					<motion.div
 						variants={containerVariants}
@@ -66,9 +66,9 @@ export default function Skills() {
 							<motion.div
 								key={category.title}
 								variants={itemVariants}
-								className="bg-gray-100 dark:bg-dark-800 rounded-lg p-6"
+								className="rounded-lg border border-zinc-700 bg-zinc-800 p-6"
 							>
-								<h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+								<h3 className="mb-4 text-xl font-semibold text-stone-100">
 									{category.title}
 								</h3>
 								<div className="flex flex-wrap gap-2">
@@ -82,7 +82,7 @@ export default function Skills() {
 												delay: categoryIndex * 0.05 + skillIndex * 0.05,
 											}}
 											viewport={{ once: true }}
-											className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium"
+											className="rounded-full border border-blue-500/40 bg-blue-950 px-3 py-1 text-sm font-medium text-blue-200"
 										>
 											{skill}
 										</motion.span>
