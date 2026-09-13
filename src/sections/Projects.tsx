@@ -92,12 +92,7 @@ export default function Projects() {
         <section id="projects" className="relative overflow-hidden bg-[#f4f8ff] py-24 sm:py-28">
             <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-sky-400/70 to-transparent" />
             <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
-                >
+                <div>
                     <div className="mb-14 flex flex-col gap-5 border-b border-sky-100 pb-8 sm:flex-row sm:items-end sm:justify-between">
                         <div className="max-w-2xl">
                             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-sky-700">
@@ -123,7 +118,7 @@ export default function Projects() {
                             <motion.div
                                 key={project.id}
                                 variants={itemVariants}
-                                className="group relative flex min-h-[390px] flex-col overflow-hidden rounded-2xl border border-sky-100 bg-white/90 p-6 shadow-[0_18px_50px_rgba(96,165,250,0.12)] transition-all duration-300 hover:-translate-y-1 hover:border-sky-300 hover:bg-white hover:shadow-[0_24px_70px_rgba(96,165,250,0.16)] sm:p-8"
+                                className="group relative flex min-h-[390px] flex-col overflow-hidden rounded-2xl border border-sky-100 bg-white/90 p-6 shadow-[0_18px_50px_rgba(96,165,250,0.12)] transition-[transform,border-color,background-color] duration-300 hover:-translate-y-1 hover:border-sky-300 hover:bg-white sm:p-8"
                             >
                                 <div className="mb-10 flex items-start justify-between gap-4">
                                     <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl border border-sky-200 bg-sky-100 text-lg font-bold tracking-wide text-sky-700 transition-colors duration-300 group-hover:bg-sky-200/70">
@@ -199,7 +194,7 @@ export default function Projects() {
                         ))
 }
                     </motion.div >
-                </motion.div >
+                </div>
             </div >
         </section >
     );

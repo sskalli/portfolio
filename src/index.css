@@ -11,6 +11,17 @@ body {
 	background-image: radial-gradient(circle at top, rgba(125, 154, 214, 0.18), transparent 42%);
 }
 
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		scroll-behavior: auto !important;
+		transition-duration: 0.01ms !important;
+	}
+}
+
 ::selection {
 	@apply bg-blue-200 text-slate-900;
 }

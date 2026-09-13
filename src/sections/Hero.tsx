@@ -1,6 +1,7 @@
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 
 export default function Hero() {
+	const shouldReduceMotion = useReducedMotion();
 	const containerVariants = {
 		hidden: { opacity: 0 },
 		visible: {
@@ -74,8 +75,8 @@ export default function Hero() {
 
 					{/* Scroll Indicator */}
 					<motion.div
-						animate={{ y: [0, 8, 0] }}
-						transition={{ duration: 2, repeat: Infinity }}
+						animate={shouldReduceMotion ? undefined : { y: [0, 8, 0] }}
+						transition={shouldReduceMotion ? undefined : { duration: 2, repeat: Infinity }}
 						className="flex justify-center mt-16"
 					>
 						<svg
