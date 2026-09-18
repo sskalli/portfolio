@@ -13,8 +13,8 @@ function App() {
 			<main className="overflow-hidden">
 				<Hero />
 				<Projects />
-				<Skills />
 				<Experience />
+				<Skills />
 				<Contact />
 			</main>
 			<Footer />
