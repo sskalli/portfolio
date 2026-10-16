@@ -121,8 +121,13 @@ export default function Projects() {
                                 className="group relative flex min-h-[390px] flex-col overflow-hidden rounded-2xl border border-sky-100 bg-white/90 p-6 shadow-[0_18px_50px_rgba(96,165,250,0.12)] transition-[transform,border-color,background-color] duration-300 hover:-translate-y-1 hover:border-sky-300 hover:bg-white sm:p-8"
                             >
                                 <div className="mb-10 flex items-start justify-between gap-4">
-                                    <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl border border-sky-200 bg-sky-100 text-lg font-bold tracking-wide text-sky-700 transition-colors duration-300 group-hover:bg-sky-200/70">
-                                        {getProjectInitials(project.name)}
+                                    <div
+                                        aria-hidden="true"
+                                        className={`flex h-16 w-16 shrink-0 items-center justify-center rounded-xl border border-sky-200 bg-sky-100 font-bold tracking-wide text-sky-700 transition-colors duration-300 group-hover:bg-sky-200/70 ${
+                                            project.iconEmoji ? 'text-3xl' : 'text-lg'
+                                        }`}
+                                    >
+                                        {project.iconEmoji ?? getProjectInitials(project.name)}
                                     </div>
                                     <span className="font-mono text-sm text-slate-500">{String(index + 1).padStart(2, '0')}</span>
                                 </div>
