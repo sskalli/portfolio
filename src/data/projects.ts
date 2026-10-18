@@ -15,7 +15,7 @@ export const projects: Project[] = [
 		iconEmoji: '🧠',
 		description:
 			'Palace is a personal note-taking web application designed to capture ideas quickly and keep them organized across devices. It combines a mobile-friendly writing experience with Markdown editing, folders, tags, search, and internal note links—making it easy to move from a quick thought to a connected collection of knowledge.',
-		techStack: ['React', 'TypeScript', 'PostgreSQL'],
+		techStack: ['React', 'Next.js', 'TypeScript', 'PostgreSQL'],
 		githubUrl: 'https://github.com/sskalli/palace',
 		liveUrl: 'https://brain-palace.vercel.app/',
 	},
@@ -25,7 +25,7 @@ export const projects: Project[] = [
 		iconEmoji: '🌳',
 		description:
 			'Little to-do list application built with Next.js and TypeScript. Features include task creation, editing, deletion, and categorization.',
-		techStack: ['React', 'TypeScript', 'PostgreSQL', 'Tailwind CSS'],
+		techStack: ['React', 'Next.js', 'TypeScript', 'PostgreSQL', 'Tailwind CSS'],
 		githubUrl: 'https://github.com/sskalli/greenie-central',
 		liveUrl: 'https://greenie-central.vercel.app/',
 	},

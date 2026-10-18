@@ -45,7 +45,7 @@ const techIconColors: Record<string, string> = {
     Expo: 'text-stone-100',
     Express: 'text-stone-200',
     Firebase: 'text-[#F59E0B]',
-    'Next.js': 'text-stone-100',
+    'Next.js': 'text-slate-900',
     'Node.js': 'text-[#3C873A]',
     PostgreSQL: 'text-[#336791]',
     React: 'text-[#61DAFB]',
